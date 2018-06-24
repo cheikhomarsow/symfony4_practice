@@ -28,6 +28,12 @@ class Job
      */
     private $description;
 
+    /**
+     *
+     * @ORM\Column(type="integer")
+     */
+    private $category;
+
     public function getId()
     {
         return $this->id;
@@ -41,12 +47,20 @@ class Job
         return $this->description;
     }
 
+    public function getCategory(){
+        return $this->category;
+    }
+
     public function setTtitle($title){
         $this->title = $title;
     }
 
     public function setDescription($description){
         $this->description = $description;
+    }
+
+    public function setCategory($category){
+        $this->category = $category;
     }
 
 
