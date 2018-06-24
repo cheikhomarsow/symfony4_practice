@@ -1,0 +1,11 @@
+$color_head : #FFF;
+$black : #000;
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body{
+  background: #f7f7f7;
+  h1{
+    color:  $black;
+  }
+}

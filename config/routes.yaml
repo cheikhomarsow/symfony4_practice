@@ -1,0 +1,7 @@
+Homepage:
+    path: /
+    controller: App\Controller\JobController::indexAction
+
+contactpage:
+    path: /contact
+    controller: App\Controller\JobController::contactAction
