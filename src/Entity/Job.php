@@ -34,6 +34,12 @@ class Job
      */
     private $category;
 
+    /**
+     *
+     * @ORM\Column(type="string")
+     */
+    private $slug;
+
     public function getId()
     {
         return $this->id;
@@ -51,7 +57,11 @@ class Job
         return $this->category;
     }
 
-    public function setTtitle($title){
+    public function getSlug(){
+        return $this->slug;
+    }
+
+    public function setTitle($title){
         $this->title = $title;
     }
 
@@ -61,6 +71,10 @@ class Job
 
     public function setCategory($category){
         $this->category = $category;
+    }
+
+    public function setSlug($slug){
+        $this->slug = $slug;
     }
 
 

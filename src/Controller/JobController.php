@@ -3,7 +3,6 @@ namespace App\Controller;
 
 use App\Entity\Job;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class JobController extends Controller {
@@ -11,10 +10,9 @@ class JobController extends Controller {
 
 
     /**
-     * @Route("/job/{id}")
+     * @Route("/job/{slug}")
      */
-    public function jobShowAction($id){
-        $job = $this->getDoctrine()->getRepository(Job::class)->find($id);
+    public function jobShowAction(Job $job){
         if(!$job){
             throw $this->createNotFoundException("L'offre d'emploie n'existe pas");
         }
